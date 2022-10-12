@@ -1,2 +1,2 @@
-# SP-Lab-1
+# Proiect pentru laboratorul de la materia Sabloane de Proiectare
  
