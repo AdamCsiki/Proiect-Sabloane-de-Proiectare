@@ -46,12 +46,7 @@ public class Chapter {
     }
 
     public void print() {
-        System.out.println(this);
-    }
-
-    @Override
-    public String toString() {
-        return "Chapter: " + this.name + "\n\t" +
-                "SubChapters: \n\t\t" + this.subChapters.stream().map(SubChapter::toString).collect(Collectors.joining());
+        System.out.println("Chapter: " + this.name);
+        this.subChapters.forEach(SubChapter::print);
     }
 }

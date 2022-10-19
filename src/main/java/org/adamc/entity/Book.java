@@ -1,50 +1,34 @@
 package org.adamc.entity;
 
 import org.adamc.entity.Author;
+import org.adamc.interfaces.Element;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class Book {
-    private long id;
+public class Book extends Section {
     private String title;
     private List<Author> authors;
-    private List<Chapter> chapters;
-    private TableOfContents tableOfContents;
+    private List<Element> elements;
 
     public Book(String title) {
-        this.title = title;
+        super(title);
         this.authors = new ArrayList<>();
-        this.chapters = new ArrayList<>();
-        this.tableOfContents = new TableOfContents();
+        this.elements = new ArrayList<>();
     }
 
     public void addAuthor(Author author) {
         this.authors.add(author);
     }
 
-    public int createChapter(String name) {
-        Chapter chapter = new Chapter(name);
-        this.chapters.add(chapter);
-
-        return this.chapters.size() - 1;
-    }
-
-    public Chapter getChapter(int chapterIndex) {
-        return this.chapters.get(chapterIndex);
-    }
-
     public void print() {
-        System.out.println(this);
+        System.out.println("Book: " + super.title);
+        System.out.println("Authors:");
+        this.authors.forEach(Author::print);
+        System.out.println("Chapters:");
+        this.elements.forEach(Element::print);
     }
 
-    @Override
-    public String toString() {
-        return "Book: \n" +
-                "Title: " + this.title + "\n" +
-                "Authors: \n\t" + this.authors.stream().map(Author::toString).collect(Collectors.joining()) + "\n" +
-                "Chapters: \n\t" + this.chapters.stream().map(Chapter::toString).collect(Collectors.joining()) + "\n" +
-                "Table of Contents: " + this.tableOfContents;
-    }
+
 }

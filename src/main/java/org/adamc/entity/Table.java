@@ -1,6 +1,8 @@
 package org.adamc.entity;
 
-public class Table {
+import org.adamc.interfaces.Element;
+
+public class Table implements Element {
     private String title;
 
     public Table(String title) {
@@ -15,12 +17,23 @@ public class Table {
         this.title = title;
     }
 
-    public void print() {
-        System.out.println(this);
+    @Override
+    public void add(Element element) {
+        // add smth
     }
 
     @Override
-    public String toString() {
-        return "Table: " + this.title + "\n";
+    public void remove(Element element) {
+        // remove smth
+    }
+
+    @Override
+    public Element get(int i) {
+        return null;
+    }
+
+    @Override
+    public void print() {
+        System.out.println("Table: " + this.title);
     }
 }

@@ -1,9 +1,20 @@
 package org.adamc.entity;
 
 public class Author {
-    private long id;
     private String name;
+    private String surname;
     private int age;
+
+    public Author(String name, String surname, int age) {
+        this.name = name;
+        this.surname = surname;
+        this.age = age;
+    }
+
+    public Author(String name, String surname) {
+        this.name = name;
+        this.surname = surname;
+    }
 
     public Author(String name) {
         this.name = name;
@@ -32,11 +43,6 @@ public class Author {
     }
 
     public void print() {
-        System.out.println(this);
-    }
-
-    @Override
-    public String toString() {
-        return "Author: " + this.name + "\n";
+        System.out.println("Author: " + this.name);
     }
 }

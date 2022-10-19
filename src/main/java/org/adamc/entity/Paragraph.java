@@ -1,6 +1,8 @@
 package org.adamc.entity;
 
-public class Paragraph {
+import org.adamc.interfaces.Element;
+
+public class Paragraph implements Element {
     private String text;
 
     public Paragraph(String text) {
@@ -15,12 +17,23 @@ public class Paragraph {
         this.text = text;
     }
 
-    public void print() {
-        System.out.println(this);
+    @Override
+    public void add(Element element) {
+        // add smth
     }
 
     @Override
-    public String toString() {
-        return "Paragraph: " + this.text + "\n";
+    public void remove(Element element) {
+        // remove smth
+    }
+
+    @Override
+    public Element get(int i) {
+        return null;
+    }
+
+    @Override
+    public void print() {
+        System.out.println("Paragraph: " + this.text);
     }
 }

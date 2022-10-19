@@ -1,5 +1,7 @@
 package org.adamc.entity;
 
+import org.adamc.interfaces.Element;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -7,41 +9,35 @@ import java.util.stream.Collectors;
 public class SubChapter {
     private String name;
 
-    private List<Image> images;
-    private List<Paragraph> paragraphs;
-    private List<Table> tables;
+    private List<Element> elements;
 
     public SubChapter(String name) {
         this.name = name;
-        this.images = new ArrayList<>();
-        this.paragraphs = new ArrayList<>();
-        this.tables = new ArrayList<>();
+        this.elements = new ArrayList<>();
     }
 
     public void createNewParagraph(String text) {
         Paragraph paragraph = new Paragraph(text);
-        this.paragraphs.add(paragraph);
+        this.elements.add(paragraph);
     }
 
     public void createNewImage(String name) {
         Image image = new Image(name);
-        this.images.add(image);
+        this.elements.add(image);
     }
 
     public void createNewTable(String title) {
         Table table = new Table(title);
-        this.tables.add(table);
+        this.elements.add(table);
     }
 
     public void print() {
-        System.out.println(this);
-    }
+        System.out.println("Subchapter: " + this.name);
 
-    @Override
-    public String toString() {
-        return "Subchapter: " + this.name + "\n" +
-                "Images: \n\t" + this.images.stream().map(Image::toString).collect(Collectors.joining()) + "\n" +
-                "Paragraph: \n\t" + this.paragraphs.stream().map(Paragraph::toString).collect(Collectors.joining()) + "\n" +
-                "";
+        System.out.println("Paragraphs:");
+        this.elements.forEach((element) -> {
+            System.out.print("\t");
+            element.print();
+        });
     }
 }

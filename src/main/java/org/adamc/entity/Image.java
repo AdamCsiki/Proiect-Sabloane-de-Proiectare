@@ -1,18 +1,31 @@
 package org.adamc.entity;
 
-public class Image {
+import org.adamc.interfaces.Element;
+
+public class Image implements Element {
     private String imageName;
 
     public Image(String imageName) {
         this.imageName = imageName;
     }
 
-    public void print() {
-        System.out.println(this);
+    @Override
+    public void add(Element element) {
+        // add smth
     }
 
     @Override
-    public String toString() {
-        return "Image: " + this.imageName + "/n";
+    public void remove(Element element) {
+        // remove smth
+    }
+
+    @Override
+    public Element get(int i) {
+        return null;
+    }
+
+    @Override
+    public void print() {
+        System.out.println("Image: " + this.imageName);
     }
 }
