@@ -6,17 +6,20 @@ import org.adamc.interfaces.Picture;
 import java.awt.*;
 import java.util.concurrent.TimeUnit;
 
-public class Image implements Element, Picture {
+public class ImageProxy implements Element, Picture {
     private String url;
-    private ImageContent content;
+    private Image realImage;
 
-    public Image(String url) {
+    public ImageProxy(String url) {
         this.url = url;
-        try {
-            TimeUnit.SECONDS.sleep(5);
-        } catch(Exception e) {
-            e.printStackTrace();
+    }
+    // loads the image from the URL,
+    // may take some time
+    public Image loadImage() {
+        if(realImage == null) {
+            realImage = new Image(url);
         }
+        return realImage;
     }
 
     @Override
@@ -34,9 +37,10 @@ public class Image implements Element, Picture {
         return null;
     }
 
+    // Loads the image and prints it afterwards
     @Override
     public void print() {
-        System.out.println("Image: " + this.url);
+        loadImage().print();
     }
 
     @Override
