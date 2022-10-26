@@ -47,6 +47,9 @@ public class Chapter {
 
     public void print() {
         System.out.println("Chapter: " + this.name);
-        this.subChapters.forEach(SubChapter::print);
+        for(SubChapter element : this.subChapters) {
+            System.out.println(element);
+            element.print();
+        }
     }
 }
