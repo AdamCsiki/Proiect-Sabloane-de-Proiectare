@@ -1,9 +1,11 @@
 package org.adamc.entity;
 
+import org.adamc.interfaces.AlignStrategy;
 import org.adamc.interfaces.Element;
 
 public class Paragraph implements Element {
     private String text;
+    private AlignStrategy textAlignment;
 
     public Paragraph(String text) {
         this.text = text;
@@ -15,6 +17,10 @@ public class Paragraph implements Element {
 
     public void setText(String text) {
         this.text = text;
+    }
+
+    public void setAlignStrategy(AlignStrategy alignStrategy) {
+        this.textAlignment = alignStrategy;
     }
 
     @Override
@@ -34,6 +40,11 @@ public class Paragraph implements Element {
 
     @Override
     public void print() {
-        System.out.println("Paragraph: " + this.text);
+        if(textAlignment == null) {
+            System.out.println(/*"Paragraph: " + */ this.text);
+        } else {
+            textAlignment.render(this);
+        }
+
     }
 }

@@ -20,7 +20,7 @@ public class Section implements Element {
 
     @Override
     public void print() {
-        System.out.println(title);
+        System.out.println("Capitol: " + title);
         elements.forEach(Element::print);
     }
 

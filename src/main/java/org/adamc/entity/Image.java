@@ -1,5 +1,6 @@
 package org.adamc.entity;
 
+import org.adamc.factory.ImageLoaderFactory;
 import org.adamc.interfaces.Element;
 import org.adamc.interfaces.Picture;
 
@@ -51,6 +52,6 @@ public class Image implements Element, Picture {
 
     @Override
     public ImageContent content() {
-        return null;
+        return new ImageLoaderFactory().create(url);
     }
 }
