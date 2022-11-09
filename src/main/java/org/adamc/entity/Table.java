@@ -1,6 +1,7 @@
 package org.adamc.entity;
 
 import org.adamc.interfaces.Element;
+import org.adamc.interfaces.Visitor;
 
 public class Table implements Element {
     private String title;
@@ -25,6 +26,11 @@ public class Table implements Element {
     @Override
     public void remove(Element element) {
         // remove smth
+    }
+
+    @Override
+    public void accept(Visitor visitor) {
+        visitor.visitTable(this);
     }
 
     @Override

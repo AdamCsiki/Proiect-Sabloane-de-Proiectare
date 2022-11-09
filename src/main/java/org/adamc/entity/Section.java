@@ -1,6 +1,7 @@
 package org.adamc.entity;
 
 import org.adamc.interfaces.Element;
+import org.adamc.interfaces.Visitor;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,6 +33,14 @@ public class Section implements Element {
     @Override
     public void remove(Element element) {
         elements.remove(element);
+    }
+
+    @Override
+    public void accept(Visitor visitor) {
+        visitor.visitSection(this);
+        for(Element element : this.elements) {
+            element.accept(visitor);
+        }
     }
 
     @Override

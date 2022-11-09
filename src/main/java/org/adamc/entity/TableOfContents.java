@@ -1,6 +1,7 @@
 package org.adamc.entity;
 
 import org.adamc.interfaces.Element;
+import org.adamc.interfaces.Visitor;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,6 +27,11 @@ public class TableOfContents implements Element {
     @Override
     public void remove(Element element) {
         // remove smth
+    }
+
+    @Override
+    public void accept(Visitor visitor) {
+        visitor.visitTableOfContents(this);
     }
 
     @Override

@@ -2,6 +2,7 @@ package org.adamc.entity;
 
 import org.adamc.interfaces.Element;
 import org.adamc.interfaces.Picture;
+import org.adamc.interfaces.Visitor;
 
 import java.awt.*;
 import java.util.concurrent.TimeUnit;
@@ -30,6 +31,11 @@ public class ImageProxy implements Element, Picture {
     @Override
     public void remove(Element element) {
         // remove smth
+    }
+
+    @Override
+    public void accept(Visitor visitor) {
+        visitor.visitImageProxy(this);
     }
 
     @Override
