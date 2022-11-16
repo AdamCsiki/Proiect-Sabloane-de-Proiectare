@@ -17,7 +17,9 @@ public class TableOfContents implements Element {
         this.contents = contents;
     }
 
-
+    public void add(String string) {
+        contents.add(string);
+    }
 
     @Override
     public void add(Element element) {
@@ -42,6 +44,9 @@ public class TableOfContents implements Element {
 
     @Override
     public void print() {
-        System.out.println("Table of contents: " + contents);
+        System.out.println("Table of contents: ");
+        for(String element : contents) {
+            System.out.println("\t" + element);
+        }
     }
 }

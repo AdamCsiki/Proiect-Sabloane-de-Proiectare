@@ -43,7 +43,7 @@ public class Image implements Element, Picture {
 
     @Override
     public void print() {
-        System.out.println("Image: " + this.url);
+        System.out.println("\t (img)" + this.url);
     }
 
     @Override

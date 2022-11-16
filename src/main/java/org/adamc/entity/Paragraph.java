@@ -46,7 +46,7 @@ public class Paragraph implements Element {
     @Override
     public void print() {
 //        if(textAlignment == null) {
-            System.out.println(/*"Paragraph: " + */ this.text);
+            System.out.println("\t" + this.text);
 //        } else {
 //            textAlignment.render(this);
 //        }

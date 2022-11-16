@@ -47,4 +47,8 @@ public class Section implements Element {
     public Element get(int i) {
         return elements.get(i);
     }
+
+    public String getTitle() {
+        return title;
+    }
 }
