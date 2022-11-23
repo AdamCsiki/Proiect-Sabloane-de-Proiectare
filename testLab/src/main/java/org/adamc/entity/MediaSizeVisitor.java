@@ -19,7 +19,7 @@ public class MediaSizeVisitor implements Visitor {
 
     @Override
     public void printSizes() {
-        System.out.printf("Total size: %d\n", totalSize);
+        System.out.printf("Total size: %d kb\n", totalSize);
         System.out.println("Playlists sizes:");
         sizes.forEach((key, value) -> {
             System.out.printf("\t%s --- %d kb", key, value);

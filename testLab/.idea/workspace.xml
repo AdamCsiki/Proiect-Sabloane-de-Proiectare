@@ -5,20 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6989b376-b184-4201-93aa-bb54420e81ea" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/adamc/entity/Gif.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/adamc/entity/MediaPlayer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/adamc/entity/MediaSizeVisitor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/adamc/entity/PlayList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/adamc/entity/Song.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/adamc/entity/Video.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/adamc/interfaces/Element.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/adamc/interfaces/Visitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/adamc/entity/MediaSizeVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/adamc/entity/MediaSizeVisitor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +77,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1669201606825</updated>
-      <workItem from="1669201608043" duration="3717000" />
+      <workItem from="1669201608043" duration="3897000" />
     </task>
     <servers />
   </component>
