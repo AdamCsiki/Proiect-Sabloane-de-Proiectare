@@ -1,6 +1,6 @@
 package org.adamc.factory;
 
-import org.adamc.interfaces.AlignStrategy;
+import org.adamc.strategy.AlignStrategy;
 
 import java.util.ArrayList;
 

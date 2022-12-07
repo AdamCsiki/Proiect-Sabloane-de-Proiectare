@@ -1,10 +1,9 @@
 package org.adamc.entity;
 
-import org.adamc.interfaces.Element;
+import org.adamc.repository.Element;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class SubChapter {
     private String name;

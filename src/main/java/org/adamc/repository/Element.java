@@ -1,4 +1,4 @@
-package org.adamc.interfaces;
+package org.adamc.repository;
 
 public interface Element {
     void print();

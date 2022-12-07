@@ -1,6 +1,6 @@
 package org.adamc.entity;
 
-import org.adamc.interfaces.Visitor;
+import org.adamc.repository.Visitor;
 
 public class BookStatistics implements Visitor {
     private int bookCounter = 0;

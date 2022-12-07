@@ -1,4 +1,4 @@
-package org.adamc.interfaces;
+package org.adamc.repository;
 
 import org.adamc.entity.ImageContent;
 

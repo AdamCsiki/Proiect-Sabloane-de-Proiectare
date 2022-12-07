@@ -1,7 +1,7 @@
 package org.adamc.entity;
 
-import org.adamc.interfaces.Element;
-import org.adamc.interfaces.Visitor;
+import org.adamc.repository.Element;
+import org.adamc.repository.Visitor;
 
 import java.util.ArrayList;
 import java.util.List;

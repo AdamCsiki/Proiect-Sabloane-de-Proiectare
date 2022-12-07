@@ -1,4 +1,4 @@
-package org.adamc.interfaces;
+package org.adamc.strategy;
 
 import org.adamc.entity.Paragraph;
 

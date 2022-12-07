@@ -1,7 +1,12 @@
 package org.adamc.entity;
 
-import org.adamc.interfaces.Element;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import org.adamc.repository.Element;
 
+import javax.management.ConstructorParameters;
 import java.util.ArrayList;
 import java.util.List;
 

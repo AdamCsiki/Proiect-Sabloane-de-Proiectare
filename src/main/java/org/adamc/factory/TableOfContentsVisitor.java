@@ -1,9 +1,7 @@
 package org.adamc.factory;
 
 import org.adamc.entity.*;
-import org.adamc.interfaces.Visitor;
-
-import java.util.List;
+import org.adamc.repository.Visitor;
 
 public class TableOfContentsVisitor implements Visitor {
 

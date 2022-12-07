@@ -1,7 +1,7 @@
 package org.adamc.factory;
 
 import org.adamc.entity.ImageContent;
-import org.adamc.interfaces.ImageLoader;
+import org.adamc.repository.ImageLoader;
 
 public class ImageLoaderFactory {
     private ImageLoader imageLoader;

@@ -1,12 +1,11 @@
 package org.adamc.entity;
 
 import org.adamc.factory.ImageLoaderFactory;
-import org.adamc.interfaces.Element;
-import org.adamc.interfaces.Picture;
-import org.adamc.interfaces.Visitor;
+import org.adamc.repository.Element;
+import org.adamc.repository.Picture;
+import org.adamc.repository.Visitor;
 
 import java.awt.*;
-import java.util.concurrent.TimeUnit;
 
 public class Image implements Element, Picture {
     private String url;

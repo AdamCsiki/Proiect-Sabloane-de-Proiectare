@@ -1,7 +1,6 @@
 package org.adamc.strategy;
 
 import org.adamc.entity.Paragraph;
-import org.adamc.interfaces.AlignStrategy;
 
 public class AlignLeft implements AlignStrategy {
     @Override
