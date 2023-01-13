@@ -1,5 +1,6 @@
 package org.adamc.mybook.entity;
 
+import org.adamc.mybook.obs.ConcreteObserver;
 import org.adamc.mybook.repository.Element;
 
 import java.util.ArrayList;
@@ -25,4 +26,7 @@ public class Book extends Section {
     }
 
 
+    public void registerObserver(ConcreteObserver o) {
+        o.update();
+    }
 }

@@ -6,10 +6,21 @@ import org.adamc.mybook.repository.Visitor;
 public class TableOfContentsVisitor implements Visitor {
 
     private TableOfContents table = new TableOfContents();
+    private Section section;
     private int pageCounter = 1;
+
+    public TableOfContentsVisitor(Section section) {
+        this.section = section;
+        this.table = new TableOfContents();
+    }
 
     @Override
     public void visitBook(Book book) {
+    }
+
+    public TableOfContents createToc() {
+        this.section.accept(this);
+        return table;
     }
 
     @Override
