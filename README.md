@@ -1,2 +1,3 @@
-# Proiect pentru laboratorul de la materia Sabloane de Proiectare
- 
+# Nota finala: 10
+Nota test: 10
+Nota proiect: 10
